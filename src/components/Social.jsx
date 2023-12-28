@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 export default function Social({source,className}){
     return (
         <ul className={className}>
           {source.map((social) => (
             <li key={social.name}>
-              <a
+              <Link
                 aria-label={social.name}
                 href={social.link}
                 target="_blank"
@@ -18,7 +19,7 @@ export default function Social({source,className}){
                 height={20}
                 />                
                 <span>{social.name}</span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
