@@ -32,7 +32,7 @@ export default function Header(){
                         <div className="justify-between items-center w-full" id="mobile-menu-2">
                             <ul className="nav-dropdown-list text-center flex flex-col mt-2 lg:flex-row lg:space-x-8 lg:mt-0">
                                 {menu.map((data,i)=>(
-                                    <li className="cursor-pointer nav-dropdown-item mb-5">
+                                    <li key={i} className="cursor-pointer nav-dropdown-item mb-5">
                                         <Link className="text-black font-bold" onClick={() => setNav(!nav)} href={data.url}>
                                             {data.name}
                                         </Link>

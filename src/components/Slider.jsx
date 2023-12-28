@@ -1,7 +1,9 @@
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 import slider from "@/config/slider.json" 
+import Link from "next/link";
 export default function Slider(){
     return(
         <section className="section">
@@ -29,7 +31,7 @@ export default function Slider(){
                   {slider.main.map(
                     (item , index) => (
                       <SwiperSlide key={index}>                                               
-                        <img
+                        <Image
                           src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
                           className="block w-full"
                           alt="..." />    
@@ -38,9 +40,9 @@ export default function Slider(){
                           <p className="mb-5">
                             {item.name}
                           </p>
-                          <a href="/catalog" className="py-2 px-8 rounded-lg hover:bg-blue-800 bg-gray-800 text-white">
+                          <Link href="/catalog" className="py-2 px-8 rounded-lg hover:bg-blue-800 bg-gray-800 text-white">
                              BELI SEKARANG
-                          </a>
+                          </Link>
                         </div>                                                             
                       </SwiperSlide>
                     )

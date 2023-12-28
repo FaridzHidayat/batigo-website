@@ -1,5 +1,5 @@
 import Image from "next/image"
-export default function(){
+export default function AboutUs(){
     return(
         <section className="section-sm mt-4">
         <div className="container">
