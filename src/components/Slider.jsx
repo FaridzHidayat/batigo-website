@@ -1,7 +1,6 @@
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import slider from "@/config/slider.json" 
 import Link from "next/link";
 export default function Slider(){
@@ -31,7 +30,7 @@ export default function Slider(){
                   {slider.main.map(
                     (item , index) => (
                       <SwiperSlide key={index}>                                               
-                        <Image
+                        <img
                           src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
                           className="block w-full"
                           alt="..." />    
